@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nyatet - Catat Apapun!</title>
+    <!-- CSS external -->
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+    <!-- Import Custom Popup -->
+    <div class="wrap_popup">
+      <section id="popupContainer">
+        <h1>Tambah Catatan</h1>
+        <div class="input_form">
+          <label for="titleInput">Judul</label>
+          <input type="text" id="titleInput" required />
+        </div>
+        <div class="input_form">
+          <label for="bodyInput">Isi Catatan</label>
+          <textarea id="bodyInput" required></textarea>
+        </div>
+        <div class="wrap_button">
+          <button id="closeBtn" onclick="closePopup()">Tutup</button>
+          <button id="submitBtn">Tambah</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="blur_bg">
+      <!-- Header - Start -->
+      <nyatet-header logoUrl="src/public/logo_nyatet.png" altImg="logo-nyatet">
+      </nyatet-header>
+
+      <!-- Header - End -->
+
+      <!-- Main - Start -->
+      <main class="nyatet_main">
+        <form id="search_bar">
+          <input
+            type="text"
+            placeholder="Cari catatan..."
+            id="searchNoteTitle"
+          />
+          <button id="searchNoteBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <path
+                d="M14.1776 0C22.0037 0 28.3552 6.35158 28.3552 14.1776C28.3552 22.0037 22.0037 28.3552 14.1776 28.3552C6.35158 28.3552 0 22.0037 0 14.1776C0 6.35158 6.35158 0 14.1776 0ZM14.1776 25.2047C20.2701 25.2047 25.2047 20.2701 25.2047 14.1776C25.2047 8.08518 20.2701 3.15058 14.1776 3.15058C8.08518 3.15058 3.15058 8.08518 3.15058 14.1776C3.15058 20.2701 8.08518 25.2047 14.1776 25.2047ZM27.5444 25.3167L32 29.7722L29.7722 32L25.3167 27.5444L27.5444 25.3167Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </form>
+        <section id="wrap_addBtn">
+          <div id="addNoteBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="39"
+              viewBox="0 0 40 39"
+              fill="none"
+            >
+              <path
+                d="M17.1916 16.8657V0.474106H22.6554V16.8657H39.047V22.3295H22.6554V38.7211H17.1916V22.3295H0.799988V16.8657H17.1916Z"
+                fill="#646679"
+              />
+            </svg>
+          </div>
+          <div class="blankDiv"></div>
+          <div class="blankDiv"></div>
+        </section>
+        <!-- <div class="wrap_list">
+          <article class="note_item">
+            <h2>Mengerjakan Task #1 Dicoding SIB 6</h2>
+            <hr>
+            <p>Kerjakan tugas Task #1 Fundamental Front End sebelum Deadline!</p>
+
+            <button class="deleteNoteBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M9.93103 2.64828H13.2414V3.97241H11.9172V12.5793C11.9172 12.945 11.6208 13.2414 11.2552 13.2414H1.98621C1.62056 13.2414 1.32414 12.945 1.32414 12.5793V3.97241H0V2.64828H3.31034V0.662069C3.31034 0.296422 3.60677 0 3.97241 0H9.26897C9.63463 0 9.93103 0.296422 9.93103 0.662069V2.64828ZM10.5931 3.97241H2.64828V11.9172H10.5931V3.97241ZM4.63448 1.32414V2.64828H8.6069V1.32414H4.63448Z" fill="white"/>
+                  </svg>
+            </button>
+
+          </article>
+        </div> -->
+
+        <nyatet-list> </nyatet-list>
+      </main>
+      <!-- Main - End -->
+
+      <!-- Footer - Start -->
+      <nyatet-footer></nyatet-footer>
+
+      <!-- Footer - End -->
+    </div>
+
+    <!-- Import JS Module -->
+    <script src="src/app.js" type="module"></script>
+  </body>
+</html>

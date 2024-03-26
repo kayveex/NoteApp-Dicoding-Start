@@ -1,0 +1,279 @@
+/* Import Design System */
+@import url('design_sys.css');
+
+/* Header - Using Custom Element */
+
+
+/* Main */
+.nyatet_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#search_bar {
+    display: flex;
+    height: 75px;
+    max-width: 1057px;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+#searchNoteTitle {
+    width: 963px;
+    border-radius: 25px;
+    border: 3px solid var(--gray-acc);
+    background-color: transparent;
+}
+
+#searchNoteTitle::placeholder {
+    color: var(--gray-acc);
+    font-size: 24px;
+}
+
+#searchNoteTitle:focus {
+    color: var(--gray-acc);
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+#searchNoteTitle:valid{
+    color: var(--gray-acc);
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+#searchNoteBtn {
+    width: 77px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--purple-main);
+}
+
+#wrap_addBtn {
+    display: flex;
+    flex-direction: row;
+    gap: 78px;
+    padding-top: 50px;
+}
+
+#addNoteBtn {
+    width: 300px;
+    height: 300px;
+    background-color: var(--dark-secondary);
+    border-radius: 5px;
+    border: 3px solid var(--gray-acc);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+#addNoteBtn:hover {
+    transform: scale(1.1);
+}
+
+.blankDiv {
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+}
+
+/* Popup Section */
+
+.wrap_popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popupContainer {
+    position: absolute;
+    visibility: hidden;
+    top: 7.5rem;
+    display: flex;
+    flex-direction: column;
+  
+    z-index: 3;
+    border-radius: 8px;
+    border-top: 5px solid #4361EE;
+    background: #212330;
+    width: 400px;
+    min-height: 400px;
+}
+
+#popupContainer > h1 {
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral-white);
+    display: flex;
+    font-size: 32px;
+}
+
+.input_form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 10px;
+}
+
+.input_form > label {
+    color: var(--neutral-white);
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.input_form > input {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--neutral-white);
+    height: 30px;
+}
+
+#titleInput:focus {
+    color: var(--neutral-white);
+    font-size: 16px;
+    padding-left: 0.5rem;
+}
+
+.input_form > textarea {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--neutral-white);
+    height: 100px;
+    resize: vertical;
+}
+
+#bodyInput:focus {
+    color: var(--neutral-white);
+    font-size: 16px;
+    padding-left: 0.5rem;
+}
+
+.wrap_button {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+}
+
+#submitBtn {
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--neutral-white);
+    background-color: var(--purple-main);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 60px;
+    cursor: pointer;
+}
+
+#closeBtn {
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--neutral-white);
+    background-color: var(--danger);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+
+
+
+/* Footer - Using Custom Element*/
+
+
+
+/* Pseudo CSS for Testing */
+.wrap_list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, 300px);
+    gap: 50px 78px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+/* Make media query min 480px max 1024px */
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+    .wrap_list {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+}
+
+/* addButton Responsive */
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+    #wrap_addBtn {
+        flex-direction: column; 
+    }
+    .blankDiv {
+        display: none;
+    }
+}
+
+.note_item {
+    width: 300px;
+    height: 300px;
+    background-color: var(--purple-main);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.note_item > hr {
+    border: 1px solid var(--neutral-white);
+    width: 78%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.note_item > h2 {
+    color: var(--neutral-white);
+    font-size: 14px;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+
+.note_item > p {
+    color: var(--neutral-white);
+    font-size: 12px;
+    text-align:justify;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 140px;
+}
+
+
+.deleteNoteBtn {
+    width: 45px;
+    height: 39px;
+    background-color: var(--danger);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.deleteNoteBtn:hover {
+    transform: scale(1.1);
+}
