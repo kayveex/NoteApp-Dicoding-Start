@@ -109,12 +109,7 @@ const home = () => {
         nyatetList.updateStyle();
 
         if (searchValue) {
-            getAllNotes().forEach(note => {
-                const noteTitleLower = note.title.toLowerCase();
-                if (noteTitleLower.includes(searchValue)) {
-                    nyatetList.renderNotes(note);
-                }
-            });    
+            nyatetList.renderNotes(searchValue);
         }else  {
             nyatetList.render();
         }
