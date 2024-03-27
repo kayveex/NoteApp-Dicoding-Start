@@ -10,21 +10,23 @@
   <body>
     <!-- Import Custom Popup -->
     <div class="wrap_popup">
-      <section id="popupContainer">
+      <form id="popupContainer">
         <h1>Tambah Catatan</h1>
         <div class="input_form">
           <label for="titleInput">Judul</label>
-          <input type="text" id="titleInput" required />
+          <input type="text" id="titleInput" />
+          <h5 id="error_title"></h5>
         </div>
         <div class="input_form">
           <label for="bodyInput">Isi Catatan</label>
-          <textarea id="bodyInput" required></textarea>
+          <textarea id="bodyInput" ></textarea>
+          <h5 id="error_body"></h5>
         </div>
         <div class="wrap_button">
-          <button id="closeBtn" onclick="closePopup()">Tutup</button>
-          <button id="submitBtn">Tambah</button>
+          <button id="closeBtn">Tutup</button>
+          <button type="submit" id="submitBtn">Tambah</button>
         </div>
-      </section>
+      </form>
     </div>
 
     <div id="blur_bg">
@@ -42,7 +44,7 @@
             placeholder="Cari catatan..."
             id="searchNoteTitle"
           />
-          <button id="searchNoteBtn">
+          <button type="submit" id="searchNoteBtn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -75,21 +77,7 @@
           <div class="blankDiv"></div>
           <div class="blankDiv"></div>
         </section>
-        <!-- <div class="wrap_list">
-          <article class="note_item">
-            <h2>Mengerjakan Task #1 Dicoding SIB 6</h2>
-            <hr>
-            <p>Kerjakan tugas Task #1 Fundamental Front End sebelum Deadline!</p>
-
-            <button class="deleteNoteBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M9.93103 2.64828H13.2414V3.97241H11.9172V12.5793C11.9172 12.945 11.6208 13.2414 11.2552 13.2414H1.98621C1.62056 13.2414 1.32414 12.945 1.32414 12.5793V3.97241H0V2.64828H3.31034V0.662069C3.31034 0.296422 3.60677 0 3.97241 0H9.26897C9.63463 0 9.93103 0.296422 9.93103 0.662069V2.64828ZM10.5931 3.97241H2.64828V11.9172H10.5931V3.97241ZM4.63448 1.32414V2.64828H8.6069V1.32414H4.63448Z" fill="white"/>
-                  </svg>
-            </button>
-
-          </article>
-        </div> -->
-
+        <!-- Display Notes using Custom Element -->
         <nyatet-list> </nyatet-list>
       </main>
       <!-- Main - End -->

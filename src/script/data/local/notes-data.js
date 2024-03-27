@@ -110,7 +110,7 @@ const getAllNotes = () => {
 };
 
 const addNote = (newNote) => {
-    notesData.push(newNote);
+    notesData.unshift(newNote); //push bagian depan JSON
 }
 
 const deleteNote = (noteId) => {
